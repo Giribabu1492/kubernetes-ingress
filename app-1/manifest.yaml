@@ -39,7 +39,7 @@ kind: Ingress
 metadata:
   name: minimal-ingress
   annotations:
-    alb.ingress.kubernetes.io/scheme: internet facing
+    alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:805160322688:certificate/a0d67145-9635-4b25-a675-f5fe65eeaae8
