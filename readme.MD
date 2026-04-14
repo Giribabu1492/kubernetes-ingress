@@ -48,12 +48,12 @@ helm repo add eks https://aws.github.io/eks-charts
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER_NAME --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 ...
 
-
+##### create iam role
 eksctl create iamserviceaccount \
 --cluster=expense \
 --namespace=expense \
 --name=expense-mysql-secret \
---attach-policy-arn=arn:aws:iam::805160322688:policy/ExpenseMySQLSecretRead \
+--attach-policy-arn=arn:aws:iam::805160322688:policy/Expense-mysql-secret-read \
 --override-existing-serviceaccounts \
 --region us-east-1 \
 --approve
